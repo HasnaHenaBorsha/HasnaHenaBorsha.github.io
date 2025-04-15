@@ -129,7 +129,18 @@
 
     @media (max-width: 576px) {
   .navbar-brand {
-    font-size: 1.1rem; /* Reduce further for very small screens */
+    font-size: 1rem;               /* Shrink the font a bit more */
+    white-space: nowrap;          /* Prevent line break */
+    width: 100%;                  /* Full width to fit text */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    text-align: left;             /* or center, if needed */
+  }
+
+  .navbar {
+    padding-left: 10px;           /* Optional: add space if it touches edge */
+    padding-right: 10px;
   }
     }
     
