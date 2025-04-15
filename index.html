@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HasnaHena Borsha | The Ultimate Multitasker</title>
+<meta name="description" content="HasnaHena Borsha – A passionate multitasker skilled in project management, data analysis, leadership, and social impact. Currently a student of Mathematics at University of Rajshahi.">
+<meta name="keywords" content="HasnaHena Borsha, project manager, data analyst, Rajshahi University, student, public speaker, multitasker, social activist, leadership, personal portfolio">
+<meta name="author" content="HasnaHena Borsha">
+
+<!-- Open Graph / Facebook Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hasnahenaborsha.github.io/">
+<meta property="og:title" content="HasnaHena Borsha | The Ultimate Multitasker">
+<meta property="og:description" content="A passionate leader and multitasker with expertise in project management, data analysis, and community building.">
+<meta property="og:image" content="assets/images/1743586200671.jpeg">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://hasnahenaborsha.github.io/">
+<meta name="twitter:title" content="HasnaHena Borsha | The Ultimate Multitasker">
+<meta name="twitter:description" content="A passionate multitasker from Rajshahi University with a diverse skill set in leadership, data, and impact.">
+<meta name="twitter:image" content="assets/images/1743586200671.jpeg">
+
+<!-- Favicon -->
+<link rel="icon" href="assets/images/1743584044614.jpeg" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Hacker Vibe) -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+      --neon-green: #00ff41;
+      --neon-pink: #ff00ff;
+      --neon-blue: #00ffff;
+      --dark-bg: #0a0a0a;
+      --darker-bg: #050505;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background: var(--dark-bg);
+      font-family: 'Share Tech Mono', monospace;
+      color: white;
+      overflow-x: hidden;
+      padding-top: 70px;
+    }
+
+    canvas.matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.1;
+  z-index: 0; /* was -1 — set to 0 or at least not negative */
+  pointer-events: none;
+}
+
+    /* ======= NAVBAR ======= */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      background: var(--darker-bg);
+      border-bottom: 1px solid var(--neon-green);
+      box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+    }
+
+    .navbar-brand {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--neon-green) !important;
+      letter-spacing: 2px;
+    }
+
+    .navbar-brand::before {
+      content: ">";
+      margin-right: 10px;
+      color: var(--neon-pink);
+    }
+
+    .nav-link {
+      color: white !important;
+      position: relative;
+      transition: 0.3s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--neon-green) !important;
+      text-shadow: 0 0 5px var(--neon-green);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--neon-green);
+      transition: 0.3s;
+    }
+
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 100%;
+    }
+
+    .navbar-toggler {
+      border: 1px solid var(--neon-green);
+    }
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,255,65,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    @media (max-width: 768px) {
+      .navbar-brand {
+        font-size: 1.2rem;
+      }
+
+      .nav-link {
+        padding-left: 1rem !important;
+      }
+
+      .nav-link::after {
+        bottom: 5px;
+      }
+    }
+        
+        /* ===== Hero Section ===== */
+        .hero {
+            height: 100vh;
+            min-height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid var(--neon-green);
+            object-fit: cover;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
+            margin-bottom: 30px;
+            transition: all 0.5s ease;
+            animation: float 6s ease-in-out infinite, pulse 4s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotateY(0deg); }
+            50% { transform: translateY(-20px) rotateY(10deg); }
+            100% { transform: translateY(0px) rotateY(0deg); }
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 30px rgba(0, 255, 65, 0.3); }
+            50% { box-shadow: 0 0 50px rgba(0, 255, 65, 0.6); }
+            100% { box-shadow: 0 0 30px rgba(0, 255, 65, 0.3); }
+        }
+        
+        .profile-img:hover {
+            animation: float 3s ease-in-out infinite, pulse 2s ease-in-out infinite, rotate 5s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        
+        .title-text {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.3);
+            transition: all 0.5s;
+        }
+        
+        .title-text:hover {
+            text-shadow: 0 0 20px rgba(0, 255, 65, 0.6);
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+            color: #aaa;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 20px;
+            transition: all 0.3s;
+        }
+        
+        .subtitle:hover {
+            color: var(--neon-green);
+            text-shadow: 0 0 5px var(--neon-green);
+        }
+        
+        .social-icons {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin: 0 10px;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            transform: scale(1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-icons a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.4), transparent);
+            transition: 0.5s;
+        }
+        
+        .social-icons a:hover {
+            background: var(--neon-green);
+            color: black;
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 255, 65, 0.4);
+        }
+        
+        .social-icons a:hover::before {
+            left: 100%;
+        }
+        
+        /* ===== CV Download Button ===== */
+        .btn-cv {
+            background: transparent;
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            padding: 12px 30px;
+            font-family: 'Share Tech Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+        }
+        
+        .btn-cv:hover {
+            background: var(--neon-green);
+            color: black;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+            transform: translateY(-3px);
+            letter-spacing: 2px;
+        }
+        
+        .btn-cv::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.4), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn-cv:hover::before {
+            left: 100%;
+        }
+        
+        /* ===== Section Styling ===== */
+        .section {
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 50px;
+            color: var(--neon-green);
+            position: relative;
+            display: inline-block;
+            padding-left: 50px;
+            transition: all 0.3s;
+        }
+        
+        .section-title:hover {
+            text-shadow: 0 0 10px var(--neon-green);
+        }
+        
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: all 0.3s;
+        }
+        
+        .section-title:hover::before {
+            filter: drop-shadow(0 0 5px var(--neon-green));
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            bottom: -10px;
+            left: 50px;
+            background: linear-gradient(90deg, var(--neon-green), transparent);
+            transition: all 0.3s;
+        }
+        
+        .section-title:hover::after {
+            width: 80%;
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+        
+        #about .section-title::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ff41'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E");
+        }
+        
+        #experience .section-title::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ff41'%3E%3Cpath d='M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z'/%3E%3C/svg%3E");
+        }
+        
+        #education .section-title::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ff41'%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z'/%3E%3C/svg%3E");
+        }
+        
+        #certifications .section-title::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ff41'%3E%3Cpath d='M4 3h16v2H4zm4 8h3v10H8zm6 0h3v10h-3z'/%3E%3C/svg%3E");
+        }
+        
+        #volunteer .section-title::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ff41'%3E%3Cpath d='M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z'/%3E%3C/svg%3E");
+        }
+        
+        #contact .section-title::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300ff41'%3E%3Cpath d='M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'/%3E%3C/svg%3E");
+        }
+        
+        /* ===== About Section ===== */
+        .about-content {
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid rgba(0, 255, 65, 0.2);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.1);
+            transition: all 0.3s;
+            height: 100%;
+        }
+        
+        .about-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 255, 65, 0.2);
+            border-color: var(--neon-green);
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+        }
+        
+        .about-content:hover .about-text {
+            color: #fff;
+            text-shadow: 0 0 5px rgba(0, 255, 65, 0.5);
+        }
+        
+        .badge-hacker {
+            background: rgba(0, 255, 65, 0.1);
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            border-radius: 20px;
+            padding: 8px 15px;
+            margin: 5px;
+            font-family: 'Share Tech Mono', monospace;
+            display: inline-block;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .badge-hacker::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .badge-hacker:hover {
+            background: var(--neon-green);
+            color: black;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 255, 65, 0.3);
+        }
+        
+        .badge-hacker:hover::before {
+            left: 100%;
+        }
+        
+                /* ===== Vertical Timeline ===== */
+                .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: var(--neon-green);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--neon-green);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+            box-shadow: 0 0 10px var(--neon-green);
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+
+        .timeline-content {
+            padding: 20px;
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid var(--neon-green);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+            transition: all 0.3s;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 255, 65, 0.3);
+            border-color: var(--neon-blue);
+        }
+
+        .timeline-content h3 {
+            color: var(--neon-green);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-content h3 i {
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+
+        .timeline-content:hover h3 i {
+            transform: rotate(15deg);
+        }
+
+        .timeline-date {
+            color: #aaa;
+            font-family: 'Share Tech Mono', monospace;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .timeline-content:hover .timeline-date {
+            color: var(--neon-green);
+        }
+
+        
+        @media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    width: 100% !important;
+    left: 0 !important;
+    padding-left: 60px;
+    padding-right: 20px;
+  }
+
+  .timeline-item::after {
+    left: 18px !important;
+    right: auto !important;
+  }
+
+  .timeline-content {
+    text-align: left;
+  }
+}
+
+        
+        /* ===== Contact Info Section ===== */
+        .contact-info {
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid var(--neon-green);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .contact-info:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 65, 0.2);
+            border-color: var(--neon-blue);
+        }
+        
+        .contact-item {
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .contact-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .contact-item i {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: var(--neon-green);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+        
+        .contact-item:hover i {
+            color: var(--neon-pink);
+            transform: scale(1.2) rotate(15deg);
+        }
+        
+        .contact-item h4 {
+            color: var(--neon-green);
+            margin-bottom: 5px;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s;
+        }
+        
+        .contact-item:hover h4 {
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+        
+        .contact-item p, .contact-item a {
+            color: white;
+            font-family: 'Share Tech Mono', monospace;
+            margin-bottom: 0;
+            transition: all 0.3s;
+        }
+        
+        .contact-item:hover p {
+            color: var(--neon-green);
+        }
+        
+        .contact-item a:hover {
+            color: var(--neon-pink);
+            text-decoration: none;
+        }
+        
+        /* ===== Footer ===== */
+        .footer {
+            background: var(--darker-bg);
+            padding: 50px 0 20px;
+            border-top: 1px solid rgba(0, 255, 65, 0.1);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-links a {
+            color: #aaa;
+            margin: 0 15px;
+            transition: all 0.3s;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--neon-green);
+            transition: width 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--neon-green);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+        
+        .footer-links a i {
+            margin-right: 8px;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover i {
+            transform: rotate(15deg);
+        }
+        
+        .copyright {
+            color: #666;
+            margin-top: 30px;
+            font-family: 'Share Tech Mono', monospace;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .footer:hover .copyright {
+            color: var(--neon-green);
+        }
+        
+        /* ===== Matrix Rain Effect ===== */
+        .matrix-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        
+        /* ===== Responsive Adjustments ===== */
+        @media (max-width: 992px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                padding-left: 40px;
+            }
+            
+            .section-title::before {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .section-title::after {
+                left: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+            
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .timeline {
+                padding-left: 30px;
+            }
+            
+            .timeline-item::after {
+                left: -35px;
+                width: 16px;
+                height: 16px;
+            }
+            
+            .contact-info {
+                padding: 20px;
+            }
+            
+            .footer-links a {
+                margin: 0 10px 10px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section {
+                padding: 50px 0;
+            }
+            
+            .section-title {
+                padding-left: 35px;
+                font-size: 1.5rem;
+            }
+            
+            .section-title::before {
+                width: 25px;
+                height: 25px;
+            }
+            
+            .section-title::after {
+                left: 35px;
+            }
+            
+            .about-content {
+                padding: 20px;
+            }
+            
+            .timeline {
+                padding-left: 20px;
+            }
+            
+            .timeline-item::after {
+                left: -30px;
+            }
+            
+            .timeline-content {
+                padding: 15px;
+            }
+            
+            .contact-item {
+                padding-left: 30px;
+            }
+            
+            .contact-item i {
+                font-size: 1rem;
+            }
+        }
+
+        /* Fix unwanted underline/focus styles on links */
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+/* Specifically for social icons and footer links */
+.footer-links a,
+.social-icons a {
+  text-decoration: none;
+  outline: none;
+}
+
+.footer-links a:focus,
+.footer-links a:active,
+.social-icons a:focus,
+.social-icons a:active {
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">HASNAHENA BORSHA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-user-secret me-2"></i>ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"><i class="fas fa-briefcase me-2"></i>EXPERIENCE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education"><i class="fas fa-graduation-cap me-2"></i>EDUCATION</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications"><i class="fas fa-certificate me-2"></i>CERTIFICATIONS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#volunteer"><i class="fas fa-hands-helping me-2"></i>VOLUNTEER</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-address-card me-2"></i>CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container text-center">
+            <img src="assets/images/1743584044614.jpeg" alt="HasnaHena Borsha" class="profile-img animate__animated animate__fadeIn">
+            <h1 class="title-text animate__animated animate__fadeInDown">HASNAHENA BORSHA</h1>
+            <p class="subtitle animate__animated animate__fadeIn animate__delay-1s">Associate Project Manager || Data Analyst || Leader || Entrepreneur || Green Activist || Social Activist || Artist || Public Speaker || Bibliophile || Traveller || Animal welfare Activist || Cadet</p>
+            <div class="social-icons animate__animated animate__fadeIn animate__delay-1s">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <a href="#" class="btn btn-cv animate__animated animate__fadeInUp animate__delay-1s"><i class="fas fa-download me-2"></i>DOWNLOAD CV</a>
+        </div>
+        <canvas id="matrix-canvas" class="matrix-rain"></canvas>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title animate__animated">ABOUT ME</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="about-content">
+                        <p class="about-text">
+                            Hi there! I’m HasnaHena Borsha — a passionate and results-driven individual currently pursuing a degree in Mathematics at the University of Rajshahi. With a strong interest in problem-solving, leadership, and social innovation, I thrive at the intersection of technology, data, and impact. I value continuous learning and personal growth, and I enjoy taking on new challenges that help me evolve both academically and professionally.
+                        <p class="about-text">
+                            Throughout my journey, I’ve gained diverse experiences in project management, data visualization, and community engagement. As an Intern in both Data Visualization and Project Management, I have worked on real-world challenges — transforming data into actionable insights and contributing to impactful projects. These roles have enhanced my ability to plan strategically, communicate effectively, and collaborate with diverse teams. I'm committed to making a meaningful difference through innovation, empathy, and service.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3 class="text-center mb-4" style="color: var(--neon-green);">KEY SKILLS</h3>
+                        <div class="text-center">
+                            <span class="badge-hacker"><i class="fas fa-project-diagram me-2"></i>Project Management</span>
+                            <span class="badge-hacker"><i class="fas fa-chart-line me-2"></i>Data Analysis</span>
+                            <span class="badge-hacker"><i class="fas fa-users me-2"></i>Leadership</span>
+                            <span class="badge-hacker"><i class="fas fa-microphone me-2"></i>Public Speaking</span>
+                            <span class="badge-hacker"><i class="fas fa-lightbulb me-2"></i>Entrepreneurship</span>
+                            <span class="badge-hacker"><i class="fas fa-leaf me-2"></i>Green Activism</span>
+                            <span class="badge-hacker"><i class="fas fa-hands-helping me-2"></i>Social Activism</span>
+                            <span class="badge-hacker"><i class="fas fa-paint-brush me-2"></i>Art</span>
+                            <span class="badge-hacker"><i class="fas fa-book me-2"></i>Bibliophile</span>
+                            <span class="badge-hacker"><i class="fas fa-plane me-2"></i>Traveller</span>
+                            <span class="badge-hacker"><i class="fas fa-paw me-2"></i>Animal Welfare</span>
+                            <span class="badge-hacker"><i class="fas fa-shield-alt me-2"></i>Cadet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Experience Section -->
+<section id="experience" class="section bg-dark">
+    <div class="container">
+        <h2 class="section-title animate__animated">PROFESSIONAL EXPERIENCE</h2>
+        
+        <div class="timeline">
+            <!-- Excelerate -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-laptop-code me-2"></i>Excelerate</h3>
+                    <span class="timeline-date"><i class="far fa-calendar-alt me-1"></i>Feb 2025 - Present | Dubai, UAE</span>
+                    <p><strong>Associate Project Manager</strong></p>
+                    <p>Excelerate is the world's first platform designed to equip individuals with 21st-century skills through personalized experiences and internship opportunities accessible from anywhere globally.</p>
+                    <p><strong>Other Roles:</strong></p>
+                    <ul>
+                        <li><i class="fas fa-chart-bar me-2"></i>Visual Data Analyst (Apr 2025 - Present)</li>
+                        <li><i class="fas fa-bullseye me-2"></i>Business Development Specialist (Apr 2025 - Present)</li>
+                        <li><i class="fas fa-hashtag me-2"></i>Digital Marketing Specialist (Apr 2025 - Present)</li>
+                        <li><i class="fas fa-network-wired me-2"></i>Outreach Consultant (Apr 2025 - Present)</li>
+                        <li><i class="fas fa-robot me-2"></i>AI-Data Analyst (Mar 2025 - Present)</li>
+                        <li><i class="fas fa-lightbulb me-2"></i>Entrepreneur (Mar 2025 - Present)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- HP Ambassador -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-laptop me-2"></i>HP Ambassador</h3>
+                    <span class="timeline-date"><i class="far fa-calendar-alt me-1"></i>Apr 2025 - Present</span>
+                    <p>Promoting tech innovation and digital empowerment.</p>
+                    <p>Earned the "HP LIFE Ambassador" badge representing commitment to lifelong learning and spreading knowledge within the community.</p>
+                </div>
+            </div>
+            
+            <!-- GAOTek Inc. -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-globe-americas me-2"></i>GAOTek Inc.</h3>
+                    <span class="timeline-date"><i class="far fa-calendar-alt me-1"></i>Apr 2025 - Present | Toronto, Canada</span>
+                    <p><strong>Human Resources Intern</strong></p>
+                    <p>Gaining hands-on experience in a global tech environment, enhancing professional skills through real-world HR practices.</p>
+                </div>
+            </div>
+            
+            <!-- Your Big Year® -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-award me-2"></i>Your Big Year®</h3>
+                    <span class="timeline-date"><i class="far fa-calendar-alt me-1"></i>Feb 2025 - Present | San Francisco, USA</span>
+                    <p><strong>Fellow</strong></p>
+                    <p>Selected as a Fellow of the prestigious Your Big Year Program, strengthening leadership capabilities and focusing on global impact.</p>
+                </div>
+            </div>
+            
+            <!-- International Leadership Competition -->
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3><i class="fas fa-trophy me-2"></i>International Leadership Competition</h3>
+                    <span class="timeline-date"><i class="far fa-calendar-alt me-1"></i>Feb 2025 - Present</span>
+                    <p><strong>District Coordinator Leader</strong></p>
+                    <p>Developing collaborative leadership style and empowering team members to work towards common goals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title animate__animated">EDUCATION</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-university me-2"></i>University of Rajshahi</h3>
+                        <p><i class="fas fa-graduation-cap me-2"></i>Mathematics</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>2022 - Present</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-school me-2"></i>Bangladesh Public Administration Training Centre School and College</h3>
+                        <p><i class="fas fa-graduation-cap me-2"></i>Higher Secondary Certificate - Science</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>2018 - 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title animate__animated">LICENSES & CERTIFICATIONS</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-shield-alt me-2"></i>Emergency Response Preparedness Program</h3>
+                        <p><i class="fas fa-certificate me-2"></i>UNICEF</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Issued Mar 2025</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-hands-helping me-2"></i>Humanitarian Advocacy</h3>
+                        <p><i class="fas fa-certificate me-2"></i>UNICEF</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Issued Mar 2025</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-book-open me-2"></i>UNHCR Refugee Education</h3>
+                        <p><i class="fas fa-certificate me-2"></i>UNICEF</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Issued Mar 2025</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-medkit me-2"></i>Bloodborne Pathogens</h3>
+                        <p><i class="fas fa-certificate me-2"></i>Save a Life Certifications by NHCPS</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Issued Feb 2025</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-child me-2"></i>Child Protection System Strengthening</h3>
+                        <p><i class="fas fa-certificate me-2"></i>UNICEF</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Issued Feb 2025</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-heartbeat me-2"></i>CPR, AED and First Aid</h3>
+                        <p><i class="fas fa-certificate me-2"></i>Save a Life Certifications by NHCPS</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Issued Feb 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section id="volunteer" class="section">
+        <div class="container">
+            <h2 class="section-title animate__animated">VOLUNTEER EXPERIENCE</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-tint me-2"></i>Executive Committee Member</h3>
+                        <p><i class="fas fa-hand-holding-heart me-2"></i>Badhon (Blood Donation)</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Apr 2024 - Present</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-globe me-2"></i>Former Volunteer</h3>
+                        <p><i class="fas fa-hand-holding-heart me-2"></i>UNICEF</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Apr 2022 - Present</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-users me-2"></i>Chief Executive Member</h3>
+                        <p><i class="fas fa-hand-holding-heart me-2"></i>Uttaran (Social Welfare)</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-comments me-2"></i>Debater</h3>
+                        <p><i class="fas fa-hand-holding-heart me-2"></i>Rajshahi University Debating Forum (RUDF)</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Apr 2024 - Present</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-briefcase me-2"></i>Faculty Ambassador</h3>
+                        <p><i class="fas fa-hand-holding-heart me-2"></i>Rajshahi University Business Club (RUBC)</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Feb 2025 - Present</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about-content h-100">
+                        <h3><i class="fas fa-hands me-2"></i>Volunteer</h3>
+                        <p><i class="fas fa-hand-holding-heart me-2"></i>Bangladesh Youngster Social Organisation</p>
+                        <p><i class="far fa-calendar-alt me-2"></i>Jan 2024 - Present</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title animate__animated">CONTACT INFO</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-info">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <h4>Location</h4>
+                                    <p>Rajshahi, Bangladesh</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <h4>Email</h4>
+                                    <p>hasnahenaborsharu@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <h4>Phone</h4>
+                                    <p>+880 1XXX XXXXXX</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-item">
+                                    <i class="fas fa-file-alt"></i>
+                                    <h4>Download CV</h4>
+                                    <a href="#" class="btn btn-cv btn-sm"><i class="fas fa-download me-2"></i>Download Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-5">
+                            <h4 style="color: var(--neon-green); margin-bottom: 20px;">CONNECT WITH ME</h4>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#about"><i class="fas fa-user-secret me-2"></i>About</a>
+                <a href="#experience"><i class="fas fa-briefcase me-2"></i>Experience</a>
+                <a href="#education"><i class="fas fa-graduation-cap me-2"></i>Education</a>
+                <a href="#certifications"><i class="fas fa-certificate me-2"></i>Certifications</a>
+                <a href="#volunteer"><i class="fas fa-hands-helping me-2"></i>Volunteer</a>
+                <a href="#contact"><i class="fas fa-address-card me-2"></i>Contact</a>
+            </div>
+            <p class="copyright">&copy; <span id="current-year"></span> HasnaHena Borsha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // === Matrix Rain Effect ===
+          const canvas = document.getElementById('matrix-canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+      
+          const katakana = 'アカサタナハマヤラワガザダバパイキシチニヒミリギジヂビピウクスツヌフムユルグズブヅプエケセテネヘメレゲゼデベペオコソトノホモヨロゴゾドボポヴッン';
+          const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+          const nums = '0123456789';
+          const alphabet = katakana + latin + nums;
+          const fontSize = 16;
+          const columns = canvas.width / fontSize;
+          const rainDrops = Array(Math.floor(columns)).fill(1);
+      
+          function drawMatrix() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+            ctx.fillStyle = '#0F0';
+            ctx.font = fontSize + 'px monospace';
+      
+            rainDrops.forEach((y, index) => {
+              const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+              ctx.fillText(text, index * fontSize, y * fontSize);
+      
+              if (y * fontSize > canvas.height && Math.random() > 0.975) {
+                rainDrops[index] = 0;
+              }
+              rainDrops[index]++;
+            });
+          }
+          setInterval(drawMatrix, 30);
+      
+          // === Responsive Resize ===
+          window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+          });
+      
+          // === Sticky Navbar Scroll Effect ===
+          window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+              navbar.classList.add('scrolled');
+            } else {
+              navbar.classList.remove('scrolled');
+            }
+          });
+      
+          // === Smooth Scroll for Anchor Links ===
+          document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+              e.preventDefault();
+              const targetId = this.getAttribute('href');
+              const targetEl = document.querySelector(targetId);
+      
+              if (targetEl) {
+                window.scrollTo({
+                  top: targetEl.offsetTop - 70,
+                  behavior: 'smooth'
+                });
+              }
+      
+              // Close navbar on mobile
+              const navbarCollapse = document.querySelector('.navbar-collapse');
+              if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                navbarCollapse.classList.remove('show');
+              }
+      
+              // Highlight active link
+              document.querySelectorAll('.nav-link').forEach(n => n.classList.remove('active'));
+              this.classList.add('active');
+            });
+          });
+      
+          // === Active Nav on Scroll ===
+          const sections = document.querySelectorAll('section');
+          const navLinks = document.querySelectorAll('.nav-link');
+      
+          function updateActiveLink() {
+            let current = '';
+            sections.forEach(section => {
+              const sectionTop = section.offsetTop;
+              if (window.scrollY >= sectionTop - 120) {
+                current = section.getAttribute('id');
+              }
+            });
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+              }
+            });
+          }
+      
+          window.addEventListener('scroll', updateActiveLink);
+          updateActiveLink();
+      
+          // === Animate timeline on scroll ===
+          const timelineItems = document.querySelectorAll('.timeline-item');
+          function showTimeline() {
+            timelineItems.forEach(item => {
+              const rect = item.getBoundingClientRect();
+              if (rect.top < window.innerHeight - 100) {
+                item.classList.add('visible');
+              }
+            });
+          }
+          window.addEventListener('scroll', showTimeline);
+          showTimeline();
+      
+          // === Animate Section Titles ===
+          const animateTitles = () => {
+            document.querySelectorAll('.section-title').forEach(el => {
+              if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+                el.classList.add('animate__fadeIn');
+              }
+            });
+          };
+          window.addEventListener('scroll', animateTitles);
+          animateTitles();
+      
+          // === Download CV Alert ===
+          document.querySelectorAll('.btn-cv').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+              e.preventDefault();
+              alert('🚀 Your CV is being downloaded...');
+              // window.location.href = 'cv-file-link.pdf'; // Uncomment this when real file is ready
+            });
+          });
+        });
+
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+      </script>
+      
+</body>
+</html>
