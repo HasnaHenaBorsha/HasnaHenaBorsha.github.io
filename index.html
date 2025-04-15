@@ -127,22 +127,22 @@
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,255,65,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
 
-    @media (max-width: 576px) {
+  @media (max-width: 576px) {
   .navbar-brand {
-    font-size: 1rem;               /* Shrink the font a bit more */
-    white-space: nowrap;          /* Prevent line break */
-    width: 100%;                  /* Full width to fit text */
+    font-size: 4.2vw;             /* Scales with screen size */
+    white-space: nowrap;          /* Keep in one line */
     overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
-    text-align: left;             /* or center, if needed */
+    text-overflow: clip;          /* REMOVE the ellipsis */
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
   }
 
   .navbar {
-    padding-left: 10px;           /* Optional: add space if it touches edge */
+    padding-left: 10px;
     padding-right: 10px;
   }
-    }
+  }
     
 
       .nav-link {
