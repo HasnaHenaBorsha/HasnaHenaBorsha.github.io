@@ -80,9 +80,13 @@
     .navbar-brand {
       font-family: 'Orbitron', sans-serif;
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       color: var(--neon-green) !important;
       letter-spacing: 2px;
+      white-space: nowrap; /* Prevent line break */
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .navbar-brand::before {
