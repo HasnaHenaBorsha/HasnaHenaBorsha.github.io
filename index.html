@@ -126,9 +126,15 @@
     }
 
     @media (max-width: 768px) {
-      .navbar-brand {
-        font-size: 1.2rem;
-      }
+  .navbar-brand {
+    font-size: 1.2rem;
+    max-width: 80vw;              /* Limit width so it fits screen */
+    white-space: normal;          /* Allow text to wrap */
+    word-wrap: break-word;        /* Break long words if needed */
+    overflow-wrap: break-word;    /* Ensure compatibility */
+  }
+    }
+    
 
       .nav-link {
         padding-left: 1rem !important;
