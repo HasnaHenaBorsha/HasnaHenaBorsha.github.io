@@ -19,5 +19,63 @@
 
 .updated-page { padding:0; background:linear-gradient(180deg,#fff 0%,#fbfcfd 100%); }.resume-header { position:relative; display:flex; align-items:center; justify-content:space-between; height:31mm; padding:8mm 10mm; overflow:hidden; color:#fff; background:linear-gradient(125deg,var(--slate-deep),#46616c); }.resume-header::after { position:absolute; top:-25mm; right:32mm; width:65mm; height:65mm; border:1mm solid rgba(255,255,255,.06); border-radius:50%; content:""; }.resume-header p { margin:0 0 1mm; color:#bcd3da; font-size:2.3mm; font-weight:700; letter-spacing:.55mm; }.resume-header h2 { margin:0; font:500 8.5mm/1 "Cormorant Garamond",Georgia,serif; }.resume-header a { position:relative; z-index:1; padding:2.5mm 3.5mm; color:#fff; background:rgba(255,255,255,.08); border:.3mm solid #a8bcc4; border-radius:5mm; font-size:2.5mm; font-weight:600; text-decoration:none; }
 .resume-columns { display:grid; grid-template-columns:1.08fr .92fr; gap:7mm; padding:7mm 9mm 6mm; }.resume-section { margin-bottom:5mm; }.resume-section h2 { position:relative; margin:0 0 2.3mm; padding:0 0 1.4mm 3.2mm; color:var(--slate-deep); border-bottom:.35mm solid #b9cad1; font-size:4.4mm; line-height:1; }.resume-section h2::before { position:absolute; bottom:-.4mm; left:0; width:1.5mm; height:5.5mm; background:var(--blue); border-radius:1mm; content:""; }.role-list { border-top:.25mm solid #e5ecef; }.role-list p { display:flex; flex-direction:column; margin:0; padding:1.25mm 1.8mm; border-bottom:.2mm solid #e1e8eb; font-size:2.45mm; line-height:1.18; }.role-list p:nth-child(odd) { background:#f3f7f9; }.role-list span { margin-top:.45mm; color:#687b83; font-size:2.05mm; }.resume-section ul { margin:0; padding-left:4mm; }.resume-section li { margin-bottom:1.25mm; font-size:2.25mm; line-height:1.25; }.resume-section li::marker { color:var(--blue); }.dense-list li { margin-bottom:.95mm; }.credential-link { display:inline-block; margin-top:1.2mm; padding:1mm 2mm; color:#365f78; background:var(--blue-soft); border-radius:3mm; font-size:2.1mm; font-weight:700; text-decoration:none; }.compact-copy { margin:0; padding:2.2mm; color:#4f5c62; background:#f3f7f9; border-left:.8mm solid var(--aqua); font-size:2.25mm; line-height:1.42; }.references-compact>div { display:grid; grid-template-columns:1fr 1fr; gap:3mm; }.references-compact p { margin:0; padding:2mm; background:var(--blue-soft); border-radius:1.5mm; font-size:2.1mm; line-height:1.35; }
-@media (max-width:820px) { .toolbar { position:relative; width:calc(100% - 16px); }.toolbar>span { display:none; }.document { width:100%; overflow-x:auto; padding:0 8px 12px; } }
+@media screen and (max-width:820px) {
+  html { background:#eef2f4; }
+  body { overflow-x:hidden; }
+  .toolbar { position:sticky; width:calc(100% - 16px); margin:8px auto; padding:9px 11px; }
+  .toolbar>span { display:none; }
+  .toolbar a,.toolbar button { font-size:11px; }
+  .document { width:100%; margin:0; padding:0 8px 18px; overflow:visible; }
+  .cv-page { width:100%; height:auto; min-height:0; margin:0 0 14px; overflow:hidden; border-radius:12px; box-shadow:0 8px 24px rgba(31,47,55,.13); }
+  .page-one { display:flex; flex-direction:column; }
+  .page-one::before { display:none; }
+  .sidebar { position:relative; top:auto; left:auto; order:1; width:100%; height:auto; padding:30px 22px; clip-path:none; border-radius:0; }
+  .sidebar h1 { margin-bottom:24px; font-size:42px; }
+  .portrait { width:170px; height:170px; margin-bottom:28px; border-width:5px; }
+  .contact,.about { max-width:520px; margin-right:auto; margin-left:auto; }
+  .contact h2,.about h2 { padding-left:0; font-size:25px; }
+  .contact ul { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 12px; margin:18px 0 28px; padding:0; }
+  .contact li { grid-template-columns:28px 1fr; margin:8px 0; font-size:12px; }
+  .contact i { font-size:19px; }
+  .about p { margin-top:12px; font-size:11px; line-height:1.65; }
+  .main-info { position:relative; top:auto; left:auto; order:2; width:100%; padding:28px 20px 18px; }
+  .main-info h2 { font-size:25px; }
+  .education-row { min-height:0; padding:12px 10px; }
+  .education-row p { padding-right:92px; font-size:14px; }
+  .education-row em { font-size:12px; }
+  .education-row strong { top:12px; right:8px; font-size:9px; }
+  .experience h2 { margin-top:18px; font-size:26px; }
+  .experience h3 { margin:12px 0 4px; padding-left:15px; font-size:15px; }
+  .experience h3::before { top:7px; width:6px; height:6px; }
+  .experience p { font-size:11px; line-height:1.5; }
+  .languages { margin-top:18px; padding:14px 16px; }
+  .languages h2 { font-size:23px; }
+  .languages p { font-size:12px; line-height:1.5; }
+  .skills { position:relative; top:auto; left:auto; order:3; width:100%; padding:10px 20px 30px; }
+  .skills h2 { width:100%; font-size:27px; }
+  .skills p { margin-bottom:10px; padding-left:8px; font-size:11px; line-height:1.5; }
+  .skills b { font-size:12px; }
+  .resume-header { height:auto; min-height:118px; padding:28px 20px; }
+  .resume-header p { font-size:9px; }
+  .resume-header h2 { font-size:35px; }
+  .resume-header a { padding:8px 11px; font-size:9px; }
+  .resume-columns { grid-template-columns:1fr; gap:0; padding:24px 18px; }
+  .resume-section { margin-bottom:26px; }
+  .resume-section h2 { margin-bottom:12px; padding:0 0 7px 14px; font-size:21px; }
+  .resume-section h2::before { width:6px; height:26px; }
+  .role-list p { padding:9px 10px; font-size:12px; }
+  .role-list span { font-size:10px; }
+  .resume-section li { margin-bottom:7px; font-size:11px; line-height:1.4; }
+  .credential-link { padding:6px 10px; font-size:10px; }
+  .compact-copy { padding:12px; font-size:11px; }
+  .references-compact>div { grid-template-columns:1fr; gap:8px; }
+  .references-compact p { padding:10px; font-size:10px; }
+}
+
+@media screen and (max-width:430px) {
+  .contact ul { grid-template-columns:1fr; }
+  .sidebar h1 { font-size:37px; }
+  .main-info { padding-right:16px; padding-left:16px; }
+  .skills { padding-right:16px; padding-left:16px; }
+}
 @media print { @page { size:A4; margin:0; } html,body { background:#fff; } body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }.toolbar { display:none!important; }.document { width:210mm; height:594mm; margin:0; overflow:hidden; }.cv-page { height:297mm; margin:0; box-shadow:none; } }
