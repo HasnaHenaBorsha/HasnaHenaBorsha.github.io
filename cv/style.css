@@ -11,7 +11,7 @@
 .main-info { position:absolute; top:12mm; left:96.5mm; width:105mm; }.main-info h2 { margin:0; font-size:5.35mm; line-height:1.05; }.education>h2 { padding:0 0 1.5mm 3mm; border-bottom:.45mm solid var(--blue); }.education>h2::before { display:inline-block; width:1.3mm; height:5mm; margin:0 1.7mm -1mm -3mm; background:var(--blue); border-radius:1mm; content:""; }
 .education-row { position:relative; min-height:14.5mm; padding:1.4mm 2mm; border-bottom:.2mm solid #e5ebee; }.education-row:nth-child(3) { background:#f5f8fa; }.education-row p { margin:0; font-size:3.7mm; line-height:1.25; }.education-row strong { position:absolute; top:1.6mm; right:3mm; padding:.8mm 1.6mm; color:#4e6670; background:var(--blue-soft); border-radius:3mm; font-size:2.5mm; }.education-row em { font-size:3.3mm; color:#4b4b4b; }
 .experience h2 { margin:1.7mm 0 .7mm; padding-left:3mm; color:var(--slate); border-left:1.3mm solid var(--blue); font-size:5.8mm; }.experience h3 { position:relative; margin:1.35mm 0 .5mm; padding-left:2.8mm; color:#304b57; font-size:3.65mm; font-weight:600; line-height:1.14; }.experience h3::before { position:absolute; top:1.35mm; left:.3mm; width:1.25mm; height:1.25mm; background:var(--blue); border-radius:50%; content:""; }.experience p { margin:0; font-size:2.72mm; line-height:1.25; letter-spacing:-.01mm; }.experience p b { color:#40545d; }
-.languages { margin-top:1.8mm; padding:2.5mm 3mm 2.8mm; background:linear-gradient(135deg,#f1f6f8,#eaf2f6); border:0; border-left:1mm solid var(--aqua); border-radius:0 2.5mm 2.5mm 0; box-shadow:0 1.3mm 3.5mm rgba(53,70,77,.08); }.languages h2 { display:flex; align-items:center; gap:1.8mm; margin:0 0 1.8mm; color:var(--slate-deep); font-family:Georgia,serif; font-size:5.1mm; }.languages h2 i { display:grid; width:6mm; height:6mm; place-items:center; color:#fff; background:var(--blue); border-radius:50%; font-size:2.8mm; }.language-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.2mm; }.language-list span { display:flex; justify-content:space-between; gap:1mm; padding:1.15mm 1.6mm; color:#5b6b72; background:rgba(255,255,255,.78); border:.2mm solid #d9e5ea; border-radius:4mm; font-size:2.25mm; line-height:1.1; }.language-list b { color:#2f454f; font-weight:700; }
+.languages { margin-top:1.8mm; padding:2.6mm 3.5mm 3mm; background:linear-gradient(135deg,#f3f7f9,#eaf2f5); border-left:1mm solid var(--aqua); border-radius:0 2mm 2mm 0; box-shadow:0 1.2mm 3mm rgba(53,70,77,.07); }.languages h2 { width:44mm; margin:0 0 1.5mm; padding-bottom:1mm; color:var(--slate-deep); border-bottom:.3mm solid #b9ccd3; font-family:Georgia,serif; font-size:5.1mm; }.languages p { margin:0; color:#43565f; font-size:2.75mm; line-height:1.48; }.languages b { color:#2d424b; font-weight:700; }
 .skills { position:absolute; top:211mm; left:3.7mm; width:198mm; }.skills h2 { width:68mm; margin:0 0 2.6mm; padding:0 0 1.4mm 3mm; color:var(--slate); border-bottom:.5mm solid var(--blue); font-size:6mm; line-height:1; }.skills h2::before { display:inline-block; width:1.3mm; height:5.3mm; margin:0 1.7mm -1mm -3mm; background:var(--blue); border-radius:1mm; content:""; }.skills p { margin:0 0 3.8mm; padding-left:1.8mm; color:#5e6c73; border-left:.4mm solid #d8e2e6; font-size:2.9mm; line-height:1.25; }.skills b { color:#35474f; font-size:3.15mm; }
 .page-two-content { padding:11mm 6mm; }.page-two-section { position:relative; }.page-two-section h2 { position:relative; margin:0; font-size:5.2mm; font-weight:400; line-height:1.2; }.page-two-section h2 span { display:inline-block; width:3.6mm; height:3.6mm; margin:0 4mm 0 .5mm; background:var(--blue); border-radius:50%; vertical-align:.5mm; }.page-two-section a { display:inline-block; margin:3.2mm 0 0 7mm; font-size:5.2mm; text-underline-offset:1mm; }
 .linkedin-section { margin-top:18mm; }.linkedin-section a { margin-top:5mm; font-size:7.2mm; }.internship-section { margin-top:19mm; }.internship-section h2 { font-size:6.2mm; }.internship-section .rule { width:121mm; margin-top:4mm; border-bottom:.45mm solid #111; }.internship-section ol { margin:7mm 0 0 12mm; padding-left:8mm; }.internship-section li { margin-bottom:3.8mm; font-size:4.25mm; letter-spacing:-.25mm; }.dot { margin:-1mm 0 0 8mm; font-size:5mm; }
@@ -50,9 +50,7 @@
   .experience p { font-size:11px; line-height:1.5; }
   .languages { margin-top:18px; padding:14px 16px; }
   .languages h2 { font-size:23px; }
-  .languages h2 i { width:30px; height:30px; font-size:14px; }
-  .language-list { gap:7px; }
-  .language-list span { padding:7px 10px; font-size:10px; }
+  .languages p { font-size:12px; line-height:1.6; }
   .skills { position:relative; top:auto; left:auto; order:3; width:100%; padding:10px 20px 30px; }
   .skills h2 { width:100%; font-size:27px; }
   .skills p { margin-bottom:10px; padding-left:8px; font-size:11px; line-height:1.5; }
@@ -79,6 +77,5 @@
   .sidebar h1 { font-size:37px; }
   .main-info { padding-right:16px; padding-left:16px; }
   .skills { padding-right:16px; padding-left:16px; }
-  .language-list { grid-template-columns:1fr; }
 }
 @media print { @page { size:A4; margin:0; } html,body { background:#fff; } body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }.toolbar { display:none!important; }.document { width:210mm; height:594mm; margin:0; overflow:hidden; }.cv-page { height:297mm; margin:0; box-shadow:none; } }
