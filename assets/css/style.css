@@ -2347,6 +2347,23 @@ body {
     font-size: 0.95rem;
 }
 
+#contact .contact-info:hover,
+#contact .contact-item:hover,
+#contact .contact-item:hover i,
+#contact .contact-item .btn-cv:hover,
+#contact .social-icons a:hover {
+    transform: none !important;
+}
+
+#contact .contact-item,
+#contact .contact-item i,
+#contact .contact-item h4,
+#contact .contact-item a,
+#contact .social-icons a,
+#contact .btn-cv {
+    transition-property: color, background-color, border-color, box-shadow, text-shadow;
+}
+
 @media (max-width: 768px) {
     #contact {
         min-height: auto;
