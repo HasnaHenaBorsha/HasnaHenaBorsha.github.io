@@ -1947,7 +1947,10 @@ section {
 }
 
 .section > .container {
-    max-width: 1400px;
+    width: min(90%, 1320px);
+    max-width: 1320px !important;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .section-title {
@@ -2081,7 +2084,7 @@ section {
 
 @media (min-width: 1200px) {
     #certifications .row > .col-md-4 {
-        width: 20%;
+        width: 25%;
     }
 
     #highlights .row > .col-lg-4 {
@@ -2090,6 +2093,12 @@ section {
 }
 
 @media (max-width: 768px) {
+    .section > .container {
+        width: 94%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
     .section {
         padding: 34px 0;
     }
