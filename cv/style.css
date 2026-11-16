@@ -24,7 +24,7 @@
 .updated-page .section-profile-link,.updated-page .credential-link,.updated-page .drive-link { color:#fff; background:#46616c; border-color:#8ba0a9; box-shadow:none; }
 .cv-page { color:#11191d; }.education-copy p,.education-row strong { color:#334850; }.experience p,.skills p { color:#26363d; }.skills b { color:#17252b; }.language-list span { color:#30434b; }.language-list b { color:#16272e; }.updated-page .role-list span { color:#304149; font-weight:500; }.updated-page .resume-section li,.updated-page .compact-copy { color:#202e34; font-weight:500; }.updated-page .reference-detail-grid p,.updated-page .reference-detail-grid li { color:#26383f; }.updated-page .competency-tags span { color:#263d47; }.updated-page .professional-contact { color:#25373f; }
 .reference-detail-grid a,.reference-detail-grid a:link,.reference-detail-grid a:visited,.reference-detail-grid a:hover,.reference-detail-grid a:active { color:inherit; border:0!important; text-decoration:none!important; text-decoration-line:none!important; }.reference-detail-grid a:hover { color:#0a66c2; }
-@media screen and (max-width:820px) {
+@media screen and (max-width:0px) {
   html { background:#eef2f4; }
   body { overflow-x:hidden; }
   .toolbar { position:sticky; width:calc(100% - 16px); margin:8px auto; padding:9px 11px; }
@@ -90,11 +90,18 @@
   .competency-tags span { padding:6px 9px; font-size:9px; }
 }
 
-@media screen and (max-width:430px) {
+@media screen and (max-width:0px) {
   .contact ul { grid-template-columns:1fr; }
   .sidebar h1 { font-size:37px; }
   .main-info { padding-right:16px; padding-left:16px; }
   .skills { padding-right:16px; padding-left:16px; }
   .language-list { grid-template-columns:1fr; }
 }
-@media print { @page { size:A4; margin:0; } html,body { background:#fff; } body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }.toolbar { display:none!important; }.document { width:210mm; height:594mm; margin:0; overflow:hidden; }.cv-page { height:297mm; margin:0; box-shadow:none; } }
+body.mobile-desktop { overflow-x:hidden; }.mobile-desktop .document { width:210mm; padding:0; overflow:visible; }.mobile-desktop .cv-page { width:210mm; height:297mm; min-height:297mm; border-radius:0; }
+@media screen and (max-width:340px) { body { overflow-x:hidden; }.document { width:210mm; margin-left:8px; zoom:.38; } }
+@media screen and (min-width:341px) and (max-width:380px) { body { overflow-x:hidden; }.document { width:210mm; margin-left:8px; zoom:.43; } }
+@media screen and (min-width:381px) and (max-width:430px) { body { overflow-x:hidden; }.document { width:210mm; margin-left:8px; zoom:.47; } }
+@media screen and (min-width:431px) and (max-width:520px) { body { overflow-x:hidden; }.document { width:210mm; margin-left:8px; zoom:.57; } }
+@media screen and (min-width:521px) and (max-width:650px) { body { overflow-x:hidden; }.document { width:210mm; margin-left:8px; zoom:.72; } }
+@media screen and (min-width:651px) and (max-width:820px) { body { overflow-x:hidden; }.document { width:210mm; margin-left:8px; zoom:.88; } }
+@media print { @page { size:A4; margin:0; } html,body { background:#fff; } body { -webkit-print-color-adjust:exact; print-color-adjust:exact; }.toolbar { display:none!important; }.document { width:210mm!important; height:594mm!important; margin:0!important; overflow:hidden; transform:none!important; }.cv-page { height:297mm; margin:0; box-shadow:none; } }

@@ -1,0 +1,9 @@
+{
+  "name": "Hasna Hena Borsha Professional CV",
+  "short_name": "Borsha CV",
+  "start_url": "/cv/",
+  "display": "standalone",
+  "background_color": "#e9edef",
+  "theme_color": "#35464d",
+  "icons": [{"src":"assets/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}
