@@ -23,6 +23,7 @@
 .updated-page .resume-columns { padding:6mm 9mm 3mm; }.updated-page .resume-section { margin-bottom:3.2mm; }.updated-page .role-list p { padding-top:1.05mm; padding-bottom:1.05mm; }.updated-page .page-two-bottom { padding-top:3.5mm; }.updated-page .reference-detail-grid article { padding:2.4mm; }.updated-page .reference-detail-grid li { margin:.6mm 0; }.updated-page .bottom-section .contact-title { margin-top:3mm; }.updated-page .professional-contact { padding:1.8mm 2.2mm; line-height:1.5; }
 .updated-page .section-profile-link,.updated-page .credential-link,.updated-page .drive-link { color:#fff; background:#46616c; border-color:#8ba0a9; box-shadow:none; }
 .cv-page { color:#11191d; }.education-copy p,.education-row strong { color:#334850; }.experience p,.skills p { color:#26363d; }.skills b { color:#17252b; }.language-list span { color:#30434b; }.language-list b { color:#16272e; }.updated-page .role-list span { color:#304149; font-weight:500; }.updated-page .resume-section li,.updated-page .compact-copy { color:#202e34; font-weight:500; }.updated-page .reference-detail-grid p,.updated-page .reference-detail-grid li { color:#26383f; }.updated-page .competency-tags span { color:#263d47; }.updated-page .professional-contact { color:#25373f; }
+.reference-detail-grid a { color:inherit; text-decoration:none; }.reference-detail-grid a:hover { color:#0a66c2; text-decoration:underline; }
 @media screen and (max-width:820px) {
   html { background:#eef2f4; }
   body { overflow-x:hidden; }
