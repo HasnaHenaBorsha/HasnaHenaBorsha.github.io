@@ -2112,3 +2112,141 @@ section {
         padding: 16px;
     }
 }
+
+/* ===== Typography and Card Polish ===== */
+body {
+    font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.bg-dark {
+    background-color: #080b0a !important;
+}
+
+.navbar-brand,
+.nav-link,
+.title-text,
+.section-title,
+.about-content h3,
+.timeline-content h3,
+.contact-item h4,
+.footer-links {
+    font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 600;
+    letter-spacing: 0.045em;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    font-size: clamp(1.45rem, 2.15vw, 1.95rem);
+}
+
+.section-title::before {
+    font-size: 0.85em;
+}
+
+.about-content,
+.timeline-content,
+.contact-info {
+    background: rgba(5, 9, 8, 0.92);
+    backdrop-filter: blur(4px);
+}
+
+.about-content h3,
+.timeline-content h3,
+#education .about-content h3,
+#certifications .about-content h3,
+#volunteer .about-content h3 {
+    font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.about-content p,
+.about-text,
+.timeline-content p,
+.timeline-content li,
+.timeline-date,
+.contact-item p {
+    font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.012em;
+}
+
+#about .about-text {
+    font-size: clamp(0.92rem, 1.1vw, 1.02rem);
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+#about .badge-hacker {
+    font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+#education {
+    min-height: auto;
+}
+
+#education .about-content {
+    height: auto;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#education .about-content h3 {
+    font-size: clamp(1.05rem, 1.45vw, 1.28rem);
+}
+
+#certifications .about-content {
+    min-height: 165px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#certifications .about-content h3 {
+    font-size: clamp(0.95rem, 1.15vw, 1.08rem);
+}
+
+#certifications .about-content p,
+#volunteer .about-content p {
+    font-size: clamp(0.82rem, 0.95vw, 0.9rem);
+    font-weight: 600;
+}
+
+#certifications > .container > .text-center .btn-cv,
+#highlights > .container > .text-center .btn-cv {
+    width: auto;
+    max-width: 100%;
+    padding: 9px 18px;
+    font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.035em;
+}
+
+.btn-cv {
+    font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    #education .about-content,
+    #certifications .about-content {
+        min-height: auto;
+    }
+}
