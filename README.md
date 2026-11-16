@@ -1,48 +1,90 @@
+<div align="center">
 
-# HasnaHenaBorsha.github.io
+# Hasna Hena Borsha | Portfolio
 
-🎯 **Personal Portfolio Website**  
-Welcome to the official portfolio of **HasnaHena Borsha** — a dynamic and ambitious individual passionate about project management, data analysis, and social impact.
+A responsive personal portfolio highlighting experience, education, certifications, volunteer work, projects, honors, courses, and professional skills.
 
-## 🚀 Live Website
-Visit: [https://HasnaHenaBorsha.github.io](https://HasnaHenaBorsha.github.io)
+[![Live Website](https://img.shields.io/badge/Live_Website-Visit_Now-00ff41?style=for-the-badge&logo=githubpages&logoColor=050505)](https://hasnahenaborsha.github.io/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hasnahenaborsha)
+[![GitHub](https://img.shields.io/badge/GitHub-HasnaHenaBorsha-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HasnaHenaBorsha)
 
-## 📂 Project Structure
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=050505)
+![Bootstrap](https://img.shields.io/badge/Bootstrap_5-7952B3?style=flat-square&logo=bootstrap&logoColor=white)
+![Responsive](https://img.shields.io/badge/Responsive-Mobile_First-00C7B7?style=flat-square&logo=googlechrome&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/Hosted_on-GitHub_Pages-222222?style=flat-square&logo=githubpages&logoColor=white)
 
-```
-├── index.html           # Main HTML file
+</div>
+
+## About the project
+
+This website presents Hasna Hena Borsha's academic, professional, leadership, and community journey in a colorful cyber-inspired interface. It is designed for desktop, tablet, and mobile screens with accessible navigation and clearly organized content.
+
+## Features
+
+- Responsive hero and mobile navigation
+- Professional experience timeline
+- Education and certification cards
+- Volunteer experience
+- Projects, honors, and selected courses
+- Real social and professional profile links
+- Animated Matrix-style background
+- Screen-fitted About and Contact sections
+- Separate HTML, CSS, and JavaScript files
+
+## Technology
+
+| Technology | Purpose |
+| --- | --- |
+| HTML5 | Semantic page structure |
+| CSS3 | Responsive layout, colors, cards, and animations |
+| JavaScript | Matrix animation, navigation, and scroll interactions |
+| Bootstrap 5 | Responsive grid and navigation components |
+| Font Awesome | Interface and social icons |
+| Google Fonts | Orbitron, Rajdhani, and Share Tech Mono |
+| Animate.css | Entry animations |
+| GitHub Pages | Website hosting |
+
+## Project structure
+
+```text
+HasnaHenaBorsha.github.io/
 ├── assets/
-│   └── images/          # Folder for all image assets
-├── README.md            # This file
-└── LICENSE              # License information
+│   ├── css/
+│   │   └── style.css
+│   ├── images/
+│   │   ├── 1743584044614.jpeg
+│   │   └── 1743586200671.jpeg
+│   └── js/
+│       └── main.js
+├── index.html
+├── LICENSE
+└── README.md
 ```
 
-## 🧠 Skills Showcased
+## Run locally
 
-- Project Management
-- Data Visualization & Analysis
-- Strategic Planning
-- Leadership & Outreach
-- Public Speaking
-- Social & Green Activism
+Clone the repository and open `index.html` in a browser. A local server is recommended:
 
-## 🖼️ Tech Used
+```bash
+python -m http.server 8000
+```
 
-- HTML5, CSS3, Bootstrap 5
-- Font Awesome Icons
-- Google Fonts (Orbitron, Share Tech Mono)
-- Animate.css
-- Custom Matrix Rain Animation
-- Responsive Design
+Then visit `http://localhost:8000`.
 
-## 📸 Screenshot
+## Links
 
-![image](https://github.com/user-attachments/assets/a8618b68-41ce-4444-8109-55ad6655860c)
+- [Live portfolio](https://hasnahenaborsha.github.io/)
+- [LinkedIn profile](https://www.linkedin.com/in/hasnahenaborsha)
+- [GitHub profile](https://github.com/HasnaHenaBorsha)
 
+## License
 
-## 📝 License
+This project is available under the [MIT License](LICENSE).
 
-This project is licensed under the [MIT License](LICENSE).
+<div align="center">
 
----
-> ✨ Designed & developed with passion by HasnaHena Borsha.
+Built with creativity, learning, and purpose by **Hasna Hena Borsha**.
+
+</div>
