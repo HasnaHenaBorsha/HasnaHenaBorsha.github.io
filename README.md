@@ -7,6 +7,7 @@ A responsive personal portfolio highlighting experience, education, certificatio
 [![Live Website](https://img.shields.io/badge/Live_Website-Visit_Now-00ff41?style=for-the-badge&logo=githubpages&logoColor=050505)](https://hasnahenaborsha.github.io/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hasnahenaborsha)
 [![GitHub](https://img.shields.io/badge/GitHub-HasnaHenaBorsha-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/HasnaHenaBorsha)
+[![View CV](https://img.shields.io/badge/View-CV-486D7E?style=for-the-badge&logo=readthedocs&logoColor=white)](https://hasnahenaborsha.github.io/cv/)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
@@ -32,6 +33,7 @@ This website presents Hasna Hena Borsha's academic, professional, leadership, an
 - Animated Matrix-style background
 - Screen-fitted About and Contact sections
 - Separate HTML, CSS, and JavaScript files
+- Responsive, print-ready CV at `/cv/`
 
 ## Technology
 
@@ -58,6 +60,12 @@ HasnaHenaBorsha.github.io/
 │   │   └── 1743586200671.jpeg
 │   └── js/
 │       └── main.js
+├── cv/
+│   ├── assets/
+│   │   └── profile.jpg
+│   ├── index.html
+│   ├── main.js
+│   └── style.css
 ├── index.html
 ├── LICENSE
 └── README.md
@@ -76,6 +84,7 @@ Then visit `http://localhost:8000`.
 ## Links
 
 - [Live portfolio](https://hasnahenaborsha.github.io/)
+- [Live CV](https://hasnahenaborsha.github.io/cv/)
 - [LinkedIn profile](https://www.linkedin.com/in/hasnahenaborsha)
 - [GitHub profile](https://github.com/HasnaHenaBorsha)
 
