@@ -1936,3 +1936,179 @@ a:active {
             font-size: 0.78rem;
         }
     }
+
+/* ===== Compact Content Sections ===== */
+section {
+    scroll-margin-top: 68px;
+}
+
+.section {
+    padding: clamp(38px, 5.5vh, 60px) 0;
+}
+
+.section > .container {
+    max-width: 1400px;
+}
+
+.section-title {
+    font-size: clamp(1.4rem, 2.5vw, 2.05rem);
+    margin-bottom: clamp(22px, 3.5vh, 34px);
+    padding-left: 42px;
+    line-height: 1.15;
+}
+
+.section-title::before {
+    width: 30px;
+    height: 30px;
+}
+
+.section-title::after {
+    left: 42px;
+}
+
+.about-content,
+#education .about-content,
+#certifications .about-content,
+#volunteer .about-content {
+    padding: clamp(16px, 2vw, 24px);
+}
+
+.about-content h3,
+.timeline-content h3,
+#education .about-content h3,
+#certifications .about-content h3,
+#volunteer .about-content h3 {
+    font-size: clamp(0.95rem, 1.35vw, 1.18rem);
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.about-content p,
+.timeline-content p,
+.timeline-content li {
+    font-size: clamp(0.78rem, 1vw, 0.92rem);
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+#about {
+    min-height: calc(100svh - 64px);
+    display: flex;
+    align-items: center;
+}
+
+#about .row {
+    align-items: stretch;
+}
+
+#about .about-text {
+    font-size: clamp(0.82rem, 1.12vw, 0.98rem);
+    line-height: 1.62;
+    margin-bottom: 16px;
+}
+
+#about .about-content h3 {
+    font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+    margin-bottom: 16px !important;
+}
+
+#about .badge-hacker {
+    padding: 6px 11px;
+    margin: 4px;
+    font-size: clamp(0.72rem, 0.9vw, 0.84rem);
+}
+
+.timeline {
+    padding-left: 34px;
+}
+
+.timeline-item {
+    margin-bottom: 18px;
+}
+
+.timeline-content {
+    padding: 15px;
+}
+
+.timeline-date {
+    font-size: 0.78rem;
+    margin-bottom: 7px;
+}
+
+#education .row,
+#certifications .row,
+#volunteer .row,
+#highlights .row {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 0.25rem;
+}
+
+#education .mb-4,
+#certifications .mb-4,
+#volunteer .mb-4,
+#highlights .mb-4 {
+    margin-bottom: 1rem !important;
+}
+
+#certifications .about-content,
+#volunteer .about-content,
+#highlights .about-content {
+    min-height: 100%;
+}
+
+#certifications .about-content p,
+#volunteer .about-content p,
+#highlights .about-content p {
+    font-size: clamp(0.75rem, 0.9vw, 0.86rem);
+}
+
+#highlights h3.text-center {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    margin-bottom: 18px !important;
+}
+
+#highlights .mb-5 {
+    margin-bottom: 1.75rem !important;
+}
+
+.contact-info {
+    padding: 22px;
+}
+
+.contact-item {
+    margin-bottom: 16px;
+}
+
+@media (min-width: 1200px) {
+    #certifications .row > .col-md-4 {
+        width: 20%;
+    }
+
+    #highlights .row > .col-lg-4 {
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 34px 0;
+    }
+
+    .section-title {
+        font-size: 1.35rem;
+        margin-bottom: 22px;
+        padding-left: 34px;
+    }
+
+    .section-title::after {
+        left: 34px;
+    }
+
+    #about {
+        min-height: auto;
+    }
+
+    #about .about-content {
+        padding: 16px;
+    }
+}
